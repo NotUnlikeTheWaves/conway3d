@@ -1,0 +1,3 @@
+[submodule "lib/FreeGLUT"]
+	path = lib/FreeGLUT
+	url = https://github.com/dcnieho/FreeGLUT
