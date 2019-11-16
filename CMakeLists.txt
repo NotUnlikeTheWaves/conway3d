@@ -7,4 +7,4 @@ add_subdirectory(lib/FreeGLUT/freeglut/freeglut)
 
 add_executable(out main.cpp)
 target_include_directories(out PRIVATE lib/FreeGLUT/freeglut/freeglut/include)
-target_link_libraries(out freeglut_static)
+target_link_libraries(out freeglut_static GLU)

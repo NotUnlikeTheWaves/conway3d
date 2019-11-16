@@ -4,7 +4,7 @@
 #include <math.h>
 #include <ctime>
 #include "GL/glut.h"
-
+#include <unistd.h>
     // Ambient light values. These will be normalized on program start.
 GLfloat amb_light[3] = {.5f, .5f, .5f};
     // Direction for diffuse lighting
@@ -146,7 +146,7 @@ void renderScene() {
                     GLfloat bias_col[] = {blocks[i][x][y].col[0] * rel, blocks[i][x][y].col[1] * rel, blocks[i][x][y].col[2] * rel};
                     colorcube((float)x + min_x, float(y) + min_y, 
                     (float)((i - idx + depth) % depth), 
-                    0.3f, bias_col);
+                    0.5f, bias_col);
                 }
             }
         }
@@ -155,8 +155,7 @@ void renderScene() {
     idx = idx % depth;
 
     glutSwapBuffers(); 
-
-
+    usleep(20000);
 }
 
     // From http://www.lighthouse3d.com/tutorials/glut-tutorial/preparing-the-window-for-a-reshape/
