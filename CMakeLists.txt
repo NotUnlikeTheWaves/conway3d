@@ -1,5 +1,6 @@
 project("3D Game Of Life")
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.0.0)
+cmake_policy(SET CMP0072 OLD)
 
 set(FREEGLUT_BUILD_DEMOS OFF CACHE BOOL "")
 set(FREEGLUT_BUILD_SHARED_LIBS OFF CACHE BOOL "")
